@@ -1,7 +1,9 @@
 module.exports = class SellPoint{
 
-    constructor(_estado){
+    constructor(_estado, canti, preci){
         this.estado = _estado;
+        this.cantidad = canti;
+        this.precio = preci;
     }
 
     getPorcentaje(){
@@ -18,5 +20,10 @@ module.exports = class SellPoint{
                 return 0.0825
         }
     }
+    getPrecioNeto()
+    {
+        return this.cantidad*this.precio;
+    }
+
 
 };
