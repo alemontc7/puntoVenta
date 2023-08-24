@@ -1,4 +1,4 @@
-import sumar from "./sumador";
+import SellPoint from "./sellpoint";
 
 const cantidad = document.querySelector("#cantidad");
 const precio = document.querySelector("#precio")
@@ -11,7 +11,9 @@ form.addEventListener("submit", (event) => {
   const cantidadItem = Number.parseInt(cantidad.value);
   const precioItem = Number.parseInt(precio.value)
   const estadoSeleccionado = estado.value;
-  div.innerHTML = "<p>" + cantidad.value + "</p> <p>" + precio.value + "</p> <p>" + estadoSeleccionado + "</p>" ;
+  const SP1 = new SellPoint(estadoSeleccionado);
+  div.innerHTML = "<p>" + cantidad.value + "</p> <p>" + precio.value + "</p> <p>" + estadoSeleccionado + "</p>" 
+  +"<p>" + SP1.getPorcentaje() + "</p>";
 });
 
 
