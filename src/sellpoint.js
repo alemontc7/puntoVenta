@@ -10,7 +10,9 @@ module.exports = class SellPoint{
 
     getPorcentaje(){
         switch(this.estado){
-
+            
+            case "UT":
+                return 0.0665;
             case "TX":
                 return 0.0625;
        
