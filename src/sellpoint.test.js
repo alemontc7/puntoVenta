@@ -14,9 +14,36 @@ describe("SellPoint", () => {
   });
 
 describe("SellPoint", () => {
-    it("Sea Cantidad 5, Precio 2, Estad CA deberia retornar 0.0825", () => {
+    it("Sea Cantidad 5, Precio 2, Estad CA deberia retornar 0.825", () => {
         const sp = new SellPoint('CA', 5,2)
         expect(sp.getVerificarImpuesto(0.825)).toEqual(true);
 
     });
+  });
+
+
+  describe("SellPoint", () => {
+    it("Sea Cantidad 11, Precio 7, Estad CA deberia retornar 6.3525", () => {
+        const sp = new SellPoint('CA', 11,7)
+        expect(sp.getVerificarImpuesto(6.3525)).toEqual(true);
+    });
+  });
+
+  describe("SellPoint", () => {
+    it("Sea Cantidad 5, Precio 2, Estado TX deberia retornar 0.625", () => {
+        const sp = new SellPoint('TX', 5,2)
+        expect(sp.getVerificarImpuesto(0.625)).toEqual(true);
+    });
+
+  
+  });
+  
+
+  describe("SellPoint", () => {
+    it("Sea Cantidad 5, Precio 2, Estado TX, cantidad total a pagar deberia retornar 0.625", () => {
+        const sp = new SellPoint('TX', 5,2)
+        expect(sp.getTotalVerificarConImpuesto(10.625)).toEqual(true);
+    });
+
+  
   });
