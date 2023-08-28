@@ -24,7 +24,7 @@ form.addEventListener("submit", (event) => {
     <p><strong>Estado:</strong> ${estadoSeleccionado}</p>
     <p><strong>Porcentaje de Impuesto:</strong> ${SP1.getPorcentaje()}</p>
     <p><strong>Precio Neto:</strong> ${precioNetoFormatted}</p>
-    <p><strong>Impuesto del precio neto:</strong> ${totalConImpuestoFormatted}</p>
+    <p><strong>Precio neto mas su impuesto:</strong> ${totalConImpuestoFormatted}</p>
     <p><strong>Descuento del precio neto:</strong> ${totalConDescuentos}</p>
 
   `;
