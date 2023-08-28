@@ -89,3 +89,25 @@ describe("SellPoint", () => {
         expect(sp.getTotalVerificarConImpuesto(10.665)).toEqual(true);
     });
   });
+
+  describe("SellPoint", () => {
+    it("Sea Cantidad 5, Precio 2 descuento deberia ser 3%", () => {
+        const sp = new SellPoint('UT', 5,2)
+        expect(sp.getDescuento(sp.getPrecioNeto(5,2))).toEqual(0.03);
+    });
+  });
+
+
+  describe("SellPoint", () => {
+    it("Sea Cantidad 5, Precio 2 descuento deberia ser 0.3 $", () => {
+        const sp = new SellPoint('UT', 5,2)
+        expect(sp.getDescuento(sp.getPrecioNeto(5,2))).toEqual(0.03);
+    });
+  });
+
+  describe("SellPoint", () => {
+    it("Sea Cantidad 5, Precio 2, descuento en base al precio neto deberia ser 0.3 $", () => {
+        const sp = new SellPoint('UT', 5,2)  
+        expect(sp.getPrecioNetoConDescuento()).toEqual(0.3);
+    });
+  });
