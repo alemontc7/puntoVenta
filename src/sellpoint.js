@@ -19,7 +19,7 @@ module.exports = class SellPoint{
             case "AL":
                 return 0.04;
             case "NV":
-                return 0.065;
+                return 0.08;
             default:
                 return 0;
         }
