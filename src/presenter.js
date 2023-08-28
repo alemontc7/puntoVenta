@@ -13,9 +13,9 @@ form.addEventListener("submit", (event) => {
   const estadoSeleccionado = estado.value;
   const SP1 = new SellPoint(estadoSeleccionado, cantidadItem, precioItem);
 
-  // Convert numbers to 2 decimal places for display
   const precioNetoFormatted = SP1.getPrecioNeto().toFixed(2);
   const totalConImpuestoFormatted = SP1.getTotalConImpuesto().toFixed(2);
+  const totalConDescuentos = SP1.getPrecioNetoConDescuento().toFixed(2);
 
   div.innerHTML = `
     <p><strong>Detalles de la Venta:</strong></p>
@@ -24,7 +24,9 @@ form.addEventListener("submit", (event) => {
     <p><strong>Estado:</strong> ${estadoSeleccionado}</p>
     <p><strong>Porcentaje de Impuesto:</strong> ${SP1.getPorcentaje()}</p>
     <p><strong>Precio Neto:</strong> ${precioNetoFormatted}</p>
-    <p><strong>Precio con Impuesto:</strong> ${totalConImpuestoFormatted}</p>
+    <p><strong>Impuesto del precio neto:</strong> ${totalConImpuestoFormatted}</p>
+    <p><strong>DEscuento del precio neto:</strong> ${totalConDescuentos}</p>
+
   `;
 });
 
