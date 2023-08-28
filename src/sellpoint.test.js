@@ -37,13 +37,26 @@ describe("SellPoint", () => {
 
   
   });
-  
 
   describe("SellPoint", () => {
-    it("Sea Cantidad 5, Precio 2, Estado TX, cantidad total a pagar deberia retornar 0.625", () => {
+    it("Sea Cantidad 5, Precio 2, Estado TX deberia retornar 10.625", () => {
         const sp = new SellPoint('TX', 5,2)
         expect(sp.getTotalVerificarConImpuesto(10.625)).toEqual(true);
     });
 
   
+  });
+
+  describe("SellPoint", () => {
+    it("Sea Cantidad 5, Precio 2, Estado AL, cantidad total a pagar deberia retornar 0.4", () => {
+        const sp = new SellPoint('AL', 5,2)
+        expect(sp.getVerificarImpuesto(0.4)).toEqual(true);
+    });
+  });
+
+  describe("SellPoint", () => {
+    it("Sea Cantidad 5, Precio 2, Estado AL, cantidad total a pagar deberia retornar 0.4", () => {
+        const sp = new SellPoint('AL', 5,2)
+        expect(sp.getTotalVerificarConImpuesto(10.4)).toEqual(true);
+    });
   });

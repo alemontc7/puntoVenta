@@ -4,7 +4,7 @@ module.exports = class SellPoint{
         this.estado = _estado;
         this.cantidad = canti;
         this.precio = preci;
-        this.eps = 1e-9;
+        this.eps = 1e-2;
         
     }
 
@@ -15,7 +15,11 @@ module.exports = class SellPoint{
                 return 0.0625;
        
             case "CA":
-                return 0.0825
+                return 0.0825;
+            case "AL":
+                return 0.04;
+            default:
+                return 0;
         }
     }
     getPrecioNeto()
