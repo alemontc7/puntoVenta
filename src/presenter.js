@@ -22,7 +22,7 @@ form.addEventListener("submit", (event) => {
     <p><strong>Cantidad:</strong> ${cantidadItem}</p>
     <p><strong>Precio:</strong> ${precioItem}</p>
     <p><strong>Estado:</strong> ${estadoSeleccionado}</p>
-    <p><strong>Porcentaje de Impuesto:</strong> ${SP1.getPorcentaje()}</p>
+    <p><strong>Porcentaje de Impuesto:</strong> ${SP1.getPorcentaje()*100} % </p>
     <p><strong>Precio Neto:</strong> ${precioNetoFormatted}</p>
     <p><strong>Porcentaje de impuesto aplicado al precio Neto:</strong> ${totalImpuesto}</p>
     <p><strong>Precio neto mas su impuesto:</strong> ${totalConImpuestoFormatted}</p>
