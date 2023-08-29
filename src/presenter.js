@@ -24,10 +24,10 @@ form.addEventListener("submit", (event) => {
     <p><strong>Estado:</strong> ${estadoSeleccionado}</p>
     <p><strong>Porcentaje de Impuesto:</strong> ${SP1.getPorcentaje()*100} % </p>
     <p><strong>Precio Neto:</strong> ${precioNetoFormatted}</p>
-    <p><strong>Porcentaje de impuesto aplicado al precio Neto:</strong> ${totalImpuesto}</p>
-    <p><strong>Precio neto mas su impuesto:</strong> ${totalConImpuestoFormatted}</p>
-    <p><strong>Descuento del precio neto:</strong> ${totalConDescuentos}</p>
-    <p><strong>TOTAL A PAGAR (Precio neto + Impuesto - descuento):</strong> ${SP1.getTotalAPagar()}</p>
+    <p><strong>Porcentaje de impuesto aplicado al precio Neto: $ </strong> ${totalImpuesto} </p>
+    <p><strong>Precio neto mas su impuesto: $</strong> ${totalConImpuestoFormatted}</p>
+    <p><strong>Descuento del precio neto: $</strong> ${totalConDescuentos}</p>
+    <p><strong>TOTAL A PAGAR (Precio neto + Impuesto - descuento): $</strong> ${SP1.getTotalAPagar()}</p>
 
   `;
 });
