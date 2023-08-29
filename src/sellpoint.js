@@ -47,10 +47,13 @@ module.exports = class SellPoint{
         if( Math.abs(this.getTotalConImpuesto() - esperado)  < this.eps) return true;
         return false;    
     }
-    getDescuento(precio)
+    getDescuento()
     {
+        const precio = this.getPrecioNeto();
         if(precio >= 0 && precio <= 1000) return 0.03;
         if(precio > 1000 && precio <= 3000) return 0.05;
+        if(precio > 3000 && precio <= 7000) return 0.07;
+
         else return 0;
     }
     getPrecioNetoConDescuento()
@@ -58,4 +61,8 @@ module.exports = class SellPoint{
         return this.getDescuento(this.getPrecioNeto())*this.getPrecioNeto();
     }
 
+    //getVerificarDescuento(esperado){
+    //    if( Math.abs(this.getPrecioNetoConDescuento - esperado)  < this.eps) return true;
+    //    return false;    
+    //}
 };
