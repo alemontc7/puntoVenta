@@ -17,7 +17,6 @@ form.addEventListener("submit", (event) => {
   const totalConImpuestoFormatted = SP1.getTotalConImpuesto().toFixed(2);
   const totalConDescuentos = SP1.getPrecioNetoConDescuento().toFixed(2);
   const totalImpuesto = SP1.getTotalImpuesto().toFixed(2);
-
   div.innerHTML = `
     <p><strong>Detalles de la Venta:</strong></p>
     <p><strong>Cantidad:</strong> ${cantidadItem}</p>
@@ -28,6 +27,7 @@ form.addEventListener("submit", (event) => {
     <p><strong>Porcentaje de impuesto aplicado al precio Neto:</strong> ${totalImpuesto}</p>
     <p><strong>Precio neto mas su impuesto:</strong> ${totalConImpuestoFormatted}</p>
     <p><strong>Descuento del precio neto:</strong> ${totalConDescuentos}</p>
+    <p><strong>TOTAL A PAGAR (Precio neto + Impuesto - descuento):</strong> ${SP1.getTotalAPagar()}</p>
 
   `;
 });

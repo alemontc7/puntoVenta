@@ -67,4 +67,11 @@ module.exports = class SellPoint{
         if( Math.abs(this.getPrecioNetoConDescuento - esperado)  < 0.001) return true;
         return false;    
     }
+
+    getTotalAPagar()
+    {
+        const totalConImpuesto = this.getTotalConImpuesto();
+        const descontado = this.getPrecioNetoConDescuento();
+        return totalConImpuesto - descontado;
+    }
 };
