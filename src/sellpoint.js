@@ -50,12 +50,11 @@ module.exports = class SellPoint{
     getDescuento()
     {
         const precio = this.getPrecioNeto();
-        if(precio >= 0 && precio <= 1000) return 0.03;
-        if(precio > 1000 && precio <= 3000) return 0.05;
-        if(precio > 3000 && precio <= 7000) return 0.07;
-        if(precio > 7000 && precio <= 10000) return 0.1;
-        if(precio > 10000 && precio <= 30000) return 0.15;
-        if(precio > 30000) return 0.2; 
+        if(precio >= 1000 && precio <= 3000) return 0.03;
+        if(precio > 3000 && precio <= 7000) return 0.05;
+        if(precio > 7000 && precio <= 10000) return 0.07;
+        if(precio > 10000 && precio <= 30000) return 0.1;
+        if(precio > 30000) return 0.15; 
         else return 0;
     }
     getPrecioNetoConDescuento()
