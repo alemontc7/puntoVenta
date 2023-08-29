@@ -55,6 +55,7 @@ module.exports = class SellPoint{
         if(precio > 3000 && precio <= 7000) return 0.07;
         if(precio > 7000 && precio <= 10000) return 0.1;
         if(precio > 10000 && precio <= 30000) return 0.15;
+        if(precio > 30000) return 0.2; 
         else return 0;
     }
     getPrecioNetoConDescuento()
