@@ -154,5 +154,20 @@ describe("SellPoint", () => {
         expect(sp.getPrecioNetoConDescuento()).toEqual(800);
     });
   });
+
+
+  describe("SellPoint", () => {
+    it("Sea Cantidad 150, Precio 100, descuento deberia ser 0.15 ", () => {
+        const sp = new SellPoint('UT', 150,100)
+        expect(sp.getDescuento(sp.getPrecioNeto())).toEqual(0.15);
+    });
+  });
+
+  describe("SellPoint", () => {
+    it("Sea Cantidad 150, Precio 100, descuento en base al precio neto deberia ser 2250$", () => {
+        const sp = new SellPoint('UT', 150,100)  
+        expect(sp.getPrecioNetoConDescuento()).toEqual(2250);
+    });
+  });
   
 
