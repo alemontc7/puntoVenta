@@ -127,16 +127,31 @@ describe("SellPoint", () => {
   });
 
   describe("SellPoint", () => {
-    it("Sea Cantidad 80, Precio 100, descuento deberia ser 0.07 $", () => {
-        const sp = new SellPoint('UT', 100,69)
+    it("Sea Cantidad 60, Precio 100, descuento deberia ser 0.07 $", () => {
+        const sp = new SellPoint('UT', 60,100)
         expect(sp.getDescuento(sp.getPrecioNeto())).toEqual(0.07);
     });
   });
 
   describe("SellPoint", () => {
-    it("Sea Cantidad 50, Precio 50, descuento en base al precio neto deberia ser 560$", () => {
-        const sp = new SellPoint('UT', 69,100)  
-        expect(sp.getPrecioNetoConDescuento()).toEqual(483);
+    it("Sea Cantidad 60, Precio 100, descuento en base al precio neto deberia ser 560$", () => {
+        const sp = new SellPoint('UT', 60,100)  
+        expect(sp.getPrecioNetoConDescuento()).toEqual(420);
+    });
+  });
+
+
+  describe("SellPoint", () => {
+    it("Sea Cantidad 60, Precio 100, descuento deberia ser 0.07 $", () => {
+        const sp = new SellPoint('UT', 60,100)
+        expect(sp.getDescuento(sp.getPrecioNeto())).toEqual(0.07);
+    });
+  });
+
+  describe("SellPoint", () => {
+    it("Sea Cantidad 60, Precio 100, descuento en base al precio neto deberia ser 560$", () => {
+        const sp = new SellPoint('UT', 60,100)  
+        expect(sp.getPrecioNetoConDescuento()).toEqual(420);
     });
   });
 
